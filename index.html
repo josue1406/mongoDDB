@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Welcome</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles2.css" />
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script src="js/scripts.js"></script>
+	<script src="js/slider.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<ul class="nav nav-tabs" id="myTab">
+				<li role="presentation" class="active" id="pel"><a href="#peliculas">Peliculas</a></li>
+				<li role="presentation" id="al"><a href="#altas">Altas</a></li>
+				<li role="presentation" id="ba"><a href="#bajas">Bajas</a></li>
+				<li role="presentation" id="ca"><a href="#cambios">Cambios</a></li>
+				<li role="presentation" id="bus"><a href="#busquedas">B&uacute;squedas</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="peliculas">
+						<h2>Peliculas:</h2>
+
+						<div id="slider">
+							<a href="#" class="control_next">>></a>
+							<a href="#" class="control_prev"><<</a>
+							<ul>
+								<li>SLIDE 1</li>
+								<li style="background: #aaa;">SLIDE 2</li>
+								<li>SLIDE 3</li>
+								<li style="background: #aaa;">SLIDE 4</li>
+							</ul>
+						</div>
+
+						<div class="slider_option">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox">Autoplay Slider</label>
+						</div>
+
+
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="altas">
+						<h2>Por favor ingresa la informaci&oacute;n:</h2>
+						<label for="Campo1">Campo1:<input type="text" id="campo1"/> </label>
+						<label for="Campo2">Campo2:<input type="text" id="campo2"/> </label>
+						<label for="Campo3">Campo3:<input type="text" id="campo3"/> </label>
+						<label for="Campo4">Campo4:<input type="text" id="campo4"/> </label>
+						<label for="Campo5">Campo5:<input type="text" id="campo5"/> </label>
+						<label for="Campo6">Campo6:<input type="text" id="campo6"/> </label>
+						<label for="Campo7">Campo7:<input type="text" id="campo7"/> </label>
+						<label for="Campo8">Campo8:<input type="text" id="campo8"/> </label>
+						<input type="button" value="Dar de alta" />
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="bajas">
+						<h2>Ingresa el ID a dar de baja:</h2>
+						<label for="CampoID">ID:<input type="text" id ="campoID"/></label>
+						<input type="button" value="Dar de baja" />
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="cambios"><h2>Modifica la informaci&oacute;n necesaria:</h2></div>
+					<div role="tabpanel" class="tab-pane fade" id="busquedas">
+						<h2>Buscar:</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<footer class="text-center">
+		<p>Integrantes: Rogelio Mart&iacute;nez Ch&aacute;vez, Josue Emmanuel De Luna Mac&iacute;as, Miguel Breceda De Lara</p>
+	</footer>
+</body>
+</html>
