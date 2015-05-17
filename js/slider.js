@@ -1,46 +1,23 @@
-jQuery(document).ready(function ($) {
-
-  $('#checkbox').change(function(){
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-  });
-
-	var slideCount = $('#slider ul li').length;
-	var slideWidth = $('#slider ul li').width();
-	var slideHeight = $('#slider ul li').height();
-	var sliderUlWidth = slideCount * slideWidth;
-
-	$('#slider').css({ width: slideWidth, height: slideHeight });
-
-	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
+var timer = 1;
+$(document).ready(function(){
+    //cargar();
+    galeria();
 });
+
+function galeria(){
+    cargar();
+    setTimeout("galeria()",3000);
+    if( timer == 6) timer = 1;
+}
+
+function cargar(){
+    $("#galeria").fadeTo(2500,1.0);
+    switch( timer ){
+      case 1: document.getElementById('galeria').innerHTML = "<img src='img/nature-photo.jpg'  />";  break;
+      case 2: document.getElementById('galeria').innerHTML =  "<img src='img/nature-photo1.jpg'  />";break;
+      case 3: document.getElementById('galeria').innerHTML =  "<img src='img/nature-photo2.jpg' />"; break;
+      case 4: document.getElementById('galeria').innerHTML =  "<img src='img/nature-photo3.jpg' />"; break;
+      case 5: document.getElementById('galeria').innerHTML =  "<img src='img/nature-photo4.jpg' />"; break;
+    }$("#galeria").fadeOut();
+   timer++;
+}
