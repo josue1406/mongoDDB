@@ -16,6 +16,7 @@
 
 	<script src="js/scripts.js"></script>
 	<script src="js/slider.js"></script>
+	<script src="js/funciones.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -36,11 +37,11 @@
 					<div role="tabpanel" class="tab-pane fade in active" id="peliculas">
 						<h2>Peliculas Disponibles:</h2>
 						<div id="contenedor">
-		            <div id="galeria">
-		            </div>
-								aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
-								http://www.lostiemposcambian.com/blog/javascript/listas-anidadas-angularjs/
-		        </div>
+							<div id="galeria">
+							</div>
+							aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
+							http://www.lostiemposcambian.com/blog/javascript/listas-anidadas-angularjs/
+						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="altas">
 						<h2>Dar de Alta a un usuario:</h2>
@@ -62,6 +63,14 @@
 					<div role="tabpanel" class="tab-pane fade" id="cambios">
 						<h2>Modifica la informaci&oacute;n necesaria:</h2>
 						aqui se agregaran las peliculas añadidas en el menu de peliculas para rentar o se modificara algun dato del usuario.
+						<br>
+						<br>
+						<!--<form action="test.php" method="POST"> -->
+							Ingresa ID:<br>
+							<input type="text" name="id_renta" id="id_renta">
+							<br><br>
+							<input type="submit" name="boton_rentar" id="boton_rentar" value="Rentar">
+						<!--</form> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="busquedas">
 						<h2>Buscar:</h2>
