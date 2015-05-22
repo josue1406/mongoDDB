@@ -6,7 +6,6 @@ $(document).ready(function(){
           id_renta: $("#id_renta").val()
         },
         function(data,status){
-            //alert("Data: " + data + "\nStatus: " + status);
               if( data == 1 )
                 alert("peliculas rentadas :)");
               else
