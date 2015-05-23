@@ -36,12 +36,52 @@
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="peliculas">
 						<h2>Peliculas Disponibles:</h2>
-						<div id="contenedor">
-							<div id="galeria">
-							</div>
-							aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
-							http://www.lostiemposcambian.com/blog/javascript/listas-anidadas-angularjs/
+						<div class="table-responsive">
+							<table class="table table-condensed table-bordered table-hover">
+								<tr>
+									<th>Las Nuevas:</th>
+									<th>Lista:</th>
+								</tr>
+								<tr>
+									<td>
+										<div id="contenedor">
+											<div id="galeria">
+											</div>
+										</div>
+									</td>
+									<td>
+										aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
+										http://www.lostiemposcambian.com/blog/javascript/listas-anidadas-angularjs/
+
+										http://www.designchemical.com/blog/index.php/jquery/create-add-remove-select-lists-using-jquery/
+										<form>
+											<fieldset>
+
+												<select name="selectfrom" id="select-from" multiple size="5">
+													<option value="1">Item 1</option>
+													<option value="2">Item 2</option>
+													<option value="3">Item 3</option>
+													<option value="4">Item 4</option>
+												</select>
+
+												<a href="JavaScript:void(0);" id="btn-add">Add &raquo;</a>
+												<a href="JavaScript:void(0);" id="btn-remove">&laquo; Remove</a>
+
+												<select name="selectto" id="select-to" multiple size="5">
+													<option value="5">Item 5</option>
+													<option value="6">Item 6</option>
+													<option value="7">Item 7</option>
+												</select>
+
+											</fieldset>
+										</form>
+									</td>
+								</tr>
+							</table>
 						</div>
+
+
+
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="altas">
 						<h2>Dar de Alta a un usuario:</h2>
@@ -66,10 +106,10 @@
 						<br>
 						<br>
 						<!--<form action="test.php" method="POST"> -->
-							Ingresa ID:<br>
-							<input type="text" name="id_renta" id="id_renta">
-							<br><br>
-							<input type="submit" name="boton_rentar" id="boton_rentar" value="Rentar">
+						Ingresa ID:<br>
+						<input type="text" name="id_renta" id="id_renta">
+						<br><br>
+						<input type="submit" name="boton_rentar" id="boton_rentar" value="Rentar">
 						<!--</form> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="busquedas">
