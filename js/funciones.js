@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    alert("hola");
     $("#boton_rentar").click(function(){
         $.post("test.php",
         {
