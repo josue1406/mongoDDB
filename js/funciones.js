@@ -27,4 +27,10 @@ $(document).ready(function(){
        });
    });
 
+   $('.list-group-item').click(function(){
+       //alert($(this).attr("id"));
+       $(this).remove();
+   });
+
+
 });

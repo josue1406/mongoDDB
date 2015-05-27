@@ -37,46 +37,153 @@
 					<div role="tabpanel" class="tab-pane fade in active" id="peliculas">
 						<h2>Peliculas Disponibles:</h2>
 						<div class="table-responsive">
-							<table class="table table-condensed table-bordered table-hover">
-								<tr>
-									<th>Las Nuevas:</th>
-									<th>Lista:</th>
+							<table class="table table-bordered">
+								<tr class="warning">
+									<th WIDTH=33%>Las Nuevas:</th>
+									<th WIDTH=33%>Haz click sobre la pelicula para agregarla a tu lista:</th>
+									<th WIDTH=33%>Peliculas agregadas:</th>
 								</tr>
 								<tr>
-									<td>
+									<td class="active">
+										<br>
 										<div id="contenedor">
 											<div id="galeria">
+												<img id="mi_pic" src='' width='100%' height='60%'/>
 											</div>
 										</div>
 									</td>
-									<td>
-										aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
+									<td class="active">
+										<!--aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
 										http://www.lostiemposcambian.com/blog/javascript/listas-anidadas-angularjs/
 
 										http://www.designchemical.com/blog/index.php/jquery/create-add-remove-select-lists-using-jquery/
-										<form>
-											<fieldset>
 
-												<select name="selectfrom" id="select-from" multiple size="5">
-													<option value="1">Item 1</option>
-													<option value="2">Item 2</option>
-													<option value="3">Item 3</option>
-													<option value="4">Item 4</option>
-												</select>
-
-												<a href="JavaScript:void(0);" id="btn-add">Add &raquo;</a>
-												<a href="JavaScript:void(0);" id="btn-remove">&laquo; Remove</a>
-
-												<select name="selectto" id="select-to" multiple size="5">
-													<option value="5">Item 5</option>
-													<option value="6">Item 6</option>
-													<option value="7">Item 7</option>
-												</select>
-
-											</fieldset>
-										</form>
+										http://www.tutosytips.com/como-usar-las-listas-html-con-bootstrap-3/
+									-->
+									<br>
+									<div id="contenedor_lista">
+										<div class="list-group">
+											<a id="m1" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Project Almanac <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m2" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Fast & Furious 7 <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m3" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Ouija <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m4" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Bob Sponja <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m5" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Birdman <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m6" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Los pinguinos de madagascar <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m7" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Dumb and dumber to <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m8" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Dragon Ball Z <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m9" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Toy Story 2014 <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m10" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Naruto <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m11" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Well Never have Paris <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m12" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> BFFs <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m13" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Just Before I go <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m14" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Get Hard <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m15" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Zapatero a tus zapatos <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m16" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Death Factory 2014 <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m17" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Girlhouse <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m18" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Musarañas <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m19" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Sorrow <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m20" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Strange Blood <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m21" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> The possession of Michael King <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m22" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> The last survivors <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m23" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Bienvenidos al ayer <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m24" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> El destino de Jupiter <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m25" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Apocalipsis los Angeles <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m26" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Insurgente <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m27" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Libertador <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m28" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> El ultimo Lobo <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m29" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> K - 9 <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m30" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Journey to Dinosaur Island <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m31" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> El inventor de Juegos <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m32" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Northmen <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m33" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Aliens on the moon <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m34" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Citizen Four <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m35" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Island of Lemurs Madagascar <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m36" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> Night will fall <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m37" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> El expreso polar <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+											<a id="m38" href="#" class="list-group-item">
+												<span class="glyphicon glyphicon-film"></span> The Gunman <span class="glyphicon glyphicon-plus-sign"></span>
+											</a>
+										</div>
+									</div>
+									</td>
+									<td class="active">
 									</td>
 								</tr>
+
 							</table>
 						</div>
 
