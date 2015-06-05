@@ -1,235 +1,35 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-	<title>Welcome</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css" />
-	<link rel="stylesheet" type="text/css" href="css/styles2.css" />
-
-	<!-- jQuery library -->
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link href="css/styleOne.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-	<script src="js/scripts.js"></script>
-	<script src="js/slider.js"></script>
 	<script src="js/funciones.js"></script>
-</head>
+	</head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<ul class="nav nav-tabs" id="myTab">
-				<li role="presentation" class="active" id="pel"><a href="#peliculas">Peliculas</a></li>
-				<li role="presentation" id="al"><a href="#altas">Altas</a></li>
-				<li role="presentation" id="ba"><a href="#bajas">Bajas</a></li>
-				<li role="presentation" id="ca"><a href="#cambios">Cambios</a></li>
-				<li role="presentation" id="bus"><a href="#busquedas">B&uacute;squedas</a></li>
-			</ul>
-		</div>
-	</nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="peliculas">
-						<h2>Peliculas Disponibles:</h2>
-						<div class="table-responsive">
-							<table class="table table-bordered">
-								<tr class="warning">
-									<th WIDTH=33%>Las Nuevas:</th>
-									<th WIDTH=33%>Haz click sobre la pelicula para agregarla a tu lista:</th>
-									<th WIDTH=33%>Peliculas agregadas:</th>
-								</tr>
-								<tr>
-									<td class="active">
-										<br>
-										<div id="contenedor">
-											<div id="galeria">
-												<img id="mi_pic" src='' width='100%' height='60%'/>
-											</div>
-										</div>
-									</td>
-									<td class="active">
-										<!--aqui quiero agregar una lista para ir añadiendo/removiendo las movies a rentar:
-										http://www.lostiemposcambian.com/blog/javascript/listas-anidadas-angularjs/
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<h1 class="text-center login-title">Inicia Sesion para continuar</h1>
+				<div class="account-wall">
+					<img class="profile-img" src="img/start2.png" alt="">
 
-										http://www.designchemical.com/blog/index.php/jquery/create-add-remove-select-lists-using-jquery/
-
-										http://www.tutosytips.com/como-usar-las-listas-html-con-bootstrap-3/
-									-->
-									<br>
-									<div id="contenedor_lista">
-										<div class="list-group">
-											<a id="m1" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Project Almanac <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m2" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Fast & Furious 7 <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m3" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Ouija <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m4" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Bob Sponja <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m5" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Birdman <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m6" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Los pinguinos de madagascar <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m7" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Dumb and dumber to <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m8" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Dragon Ball Z <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m9" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Toy Story 2014 <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m10" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Naruto <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m11" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Well Never have Paris <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m12" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> BFFs <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m13" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Just Before I go <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m14" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Get Hard <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m15" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Zapatero a tus zapatos <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m16" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Death Factory 2014 <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m17" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Girlhouse <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m18" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Musarañas <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m19" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Sorrow <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m20" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Strange Blood <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m21" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> The possession of Michael King <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m22" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> The last survivors <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m23" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Bienvenidos al ayer <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m24" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> El destino de Jupiter <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m25" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Apocalipsis los Angeles <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m26" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Insurgente <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m27" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Libertador <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m28" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> El ultimo Lobo <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m29" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> K - 9 <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m30" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Journey to Dinosaur Island <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m31" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> El inventor de Juegos <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m32" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Northmen <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m33" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Aliens on the moon <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m34" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Citizen Four <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m35" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Island of Lemurs Madagascar <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m36" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> Night will fall <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m37" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> El expreso polar <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-											<a id="m38" href="#" class="list-group-item">
-												<span class="glyphicon glyphicon-film"></span> The Gunman <span class="glyphicon glyphicon-plus-sign"></span>
-											</a>
-										</div>
-									</div>
-									</td>
-									<td class="active">
-									</td>
-								</tr>
-
-							</table>
-						</div>
-
-
-
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="altas">
-						<h2>Dar de Alta a un usuario:</h2>
-						<label for="Campo1">Campo1:<input type="text" id="campo1"/> </label>
-						<label for="Campo2">Campo2:<input type="text" id="campo2"/> </label>
-						<label for="Campo3">Campo3:<input type="text" id="campo3"/> </label>
-						<label for="Campo4">Campo4:<input type="text" id="campo4"/> </label>
-						<label for="Campo5">Campo5:<input type="text" id="campo5"/> </label>
-						<label for="Campo6">Campo6:<input type="text" id="campo6"/> </label>
-						<label for="Campo7">Campo7:<input type="text" id="campo7"/> </label>
-						<label for="Campo8">Campo8:<input type="text" id="campo8"/> </label>
-						<input type="button" value="Dar de alta" />
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="bajas">
-						<h2>Ingresa el ID a dar de baja:</h2>
-						<label for="CampoID">ID:<input type="text" id ="campoID"/></label>
-						<input type="button" value="Dar de baja" />
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="cambios">
-						<h2>Modifica la informaci&oacute;n necesaria:</h2>
-						aqui se agregaran las peliculas añadidas en el menu de peliculas para rentar o se modificara algun dato del usuario.
-						<br>
-						<br>
-						<!--<form action="test.php" method="POST"> -->
-						Ingresa ID:<br>
-						<input type="text" name="id_renta" id="id_renta">
-						<br><br>
-						<input type="submit" name="boton_rentar" id="boton_rentar" value="Rentar">
-						<!--</form> -->
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="busquedas">
-						<h2>Buscar:</h2>
-						aqui solo ingresaras el id para mostrar las peliculas e informacion del usuario
-					</div>
+						<input name="usuario" id="usuario" type="text" class="form-control" placeholder="Email" required autofocus>
+						<input name="contraseña" id="contraseña" type="password" class="form-control" placeholder="Password" required>
+						<input type="submit" name="iniciar_sesion" id="iniciar_sesion" value="Login in" class="btn btn-lg btn-primary btn-block">
+						<label class="checkbox pull-center">
+							<a href="#" class="text-center new-account">Informacion</a>
+						</label>
 				</div>
+
 			</div>
 		</div>
 	</div>
-	<hr>
-	<footer class="text-center">
-		<p>Integrantes: Rogelio Mart&iacute;nez Ch&aacute;vez, Josue Emmanuel De Luna Mac&iacute;as, Miguel Breceda De Lara</p>
-	</footer>
 </body>
 </html>
+
+<!-- <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt=""> -->
