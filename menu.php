@@ -37,19 +37,23 @@
 				<li role="presentation" id="ss"><a href="cerrarSesion.php">Salir</a></li>
 			</ul>
 		</div>
+		<div class="text-center">
+			Bienvenido <?php echo $_SESSION['cliente']; ?>
+		</div>
+
 	</nav>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="peliculas">
-						<h2>Peliculas Disponibles:</h2>
+						<h2>Peliculas nuevas disponibles para usuarios premium: $49 c/u por mes</h2>
 						<div class="table-responsive">
 							<table class="table table-bordered">
 								<tr class="warning">
 									<th WIDTH=33%>Las Nuevas:</th>
-									<th WIDTH=33%>Haz click sobre la pelicula para agregarla a tu lista:</th>
-									<th WIDTH=33%>Peliculas agregadas:</th>
+									<th WIDTH=33%>Haz click sobre la pelicula para agregarla a tu lista</th>
+									<th WIDTH=33%>Haz click sobre la pelicula para removerla</th>
 								</tr>
 								<tr>
 									<td class="active">
@@ -80,7 +84,7 @@
 										<li id="Zapatero a tus zapatos" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Zapatero a tus zapatos&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
 										<li id="Death Factory 2014" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Death Factory 2014&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
 										<li id="Girlhouse" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Girlhouse&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
-										<li id="Musarañas" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Musarañas&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
+										<li id="Musara&ntilde;as" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Musara&ntilde;as&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
 										<li id="Sorrow" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Sorrow&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
 										<li id="Strange Blood" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;Strange Blood&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
 										<li id="The possession of Michael King" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;The possession of Michael King&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>
@@ -113,8 +117,9 @@
 
 							</table>
 						</div>
-
-
+						<br>
+						<center><input type="button" value="Rentar" id="get"/></center>
+						<br>
 
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="altas">
@@ -164,8 +169,15 @@
 						<input type="submit" name="boton_actualizar" id="boton_actualizar" value="Actualizar" >
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="busquedas">
-						<h2>Buscar:</h2>
-						aqui solo ingresaras el id para mostrar las peliculas e informacion del usuario
+						<h2>Ingresa un id para un solo usuario o deja la entrada vacia para mostrar a todos:</h2>
+						<br>
+						<h4><span class="label label-primary">Ingresa id:</span></h4>
+						<input type="text" id="buscando"/>
+						<input type="submit" name="boton_buscar" id="boton_buscar" value="Buscar" >
+
+							<table id="tablass" class="table table-bordered">
+							</table>
+
 					</div>
 				</div>
 			</div>

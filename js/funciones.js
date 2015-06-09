@@ -6,6 +6,8 @@ $(document).ready(function(){
     altas();
     bajas();
     cambios();
+    getData();
+    buscar();
 });
 
 function iniciar(){
@@ -34,40 +36,40 @@ function iniciar(){
 }
 
 function cambiandoAtributos(){
-    $("#nameNombre").change( function (){
-        if($("#nameNombre option:selected").text() == "Id"){
+    $("#opcionCambio").change( function (){
+        if($("#opcionCambio option:selected").text() == "Id"){
             $("#modi").attr("name", "Sid");
             $("#modi").attr("placeholder","id");
         }
-        if($("#nameNombre option:selected").text() == "Nombre"){
+        if($("#opcionCambio option:selected").text() == "Nombre"){
             $("#modi").attr("name", "Snombre");
             $("#modi").attr("placeholder","Nombre");
         }
-        if($("#nameNombre option:selected").text() == "Apellido"){
+        if($("#opcionCambio option:selected").text() == "Apellido"){
             $("#modi").attr("name", "Sapellido");
             $("#modi").attr("placeholder","Apellido");
         }
-        if($("#nameNombre option:selected").text() == "Nickname"){
+        if($("#opcionCambio option:selected").text() == "Nickname"){
             $("#modi").attr("name", "snickname");
             $("#modi").attr("placeholder","Nickname");
         }
-        if($("#nameNombre option:selected").text() == "Edad"){
+        if($("#opcionCambio option:selected").text() == "Edad"){
             $("#modi").attr("name", "sedad");
             $("#modi").attr("placeholder","Edad");
         }
-        if($("#nameNombre option:selected").text() == "E-mail"){
+        if($("#opcionCambio option:selected").text() == "E-mail"){
             $("#modi").attr("name", "semail");
             $("#modi").attr("placeholder","E-mail");
         }
-        if($("#nameNombre option:selected").text() == "Contrasena"){
+        if($("#opcionCambio option:selected").text() == "Contrasena"){
             $("#modi").attr("name", "scontraseña");
             $("#modi").attr("placeholder","Contrasena");
         }
-        if($("#nameNombre option:selected").text() == "Telefono"){
+        if($("#opcionCambio option:selected").text() == "Telefono"){
             $("#modi").attr("name", "stelefono");
             $("#modi").attr("placeholder","Telefono");
         }
-        if($("#nameNombre option:selected").text() == "Tipo de usuario"){
+        if($("#opcionCambio option:selected").text() == "Tipo de usuario"){
             $("#modi").attr("name", "stipousuario");
             $("#modi").attr("placeholder","Tipo de usuario");
         }
@@ -204,4 +206,80 @@ function add_remove(){
       $('#listadas').append('<li id="'+ this.id +'" class="list-group-item"><span class="glyphicon glyphicon-film"></span>&nbsp;&nbsp;'+ this.id +'&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></li>');
       $(this).remove();
    });
+}
+
+function getData(){
+    $("#get").click(function () {
+        var movies = new Array();
+        $("#agregadas li").each(function (index) {
+            movies[index] = $(this).attr('id');
+            $(this).remove();
+        });
+        //alert( movies );
+        var dataPost = {
+      		peliculas: movies,
+      		controlador: 4
+      	};
+      	$.ajax({
+      		type: 'POST',
+      		url: 'transacciones.php',
+      		data: dataPost,
+      		dataType: 'json'
+      	})
+        .success(function(data){
+           if( data.result != null )
+              alert( data.result );
+           else
+              alert( "error al rentar." );
+        })
+        .error(function(data, error){
+          alert('La peticion no se completo por: ' + error);
+        });
+    });
+}
+
+function buscar(){
+  $("#boton_buscar").click(function(){
+      //if( $('#buscando').val().trim() == "" ){
+        //alert("empty");
+      //}
+      //else{
+        var dataPost = {
+      		idBuscar: $("#buscando").val().trim(),
+      		controlador: 5
+      	};
+      	$.ajax({
+      		type: 'POST',
+      		url: 'transacciones.php',
+      		data: dataPost,
+      		dataType: 'json'
+      	})
+        .success(function(data){
+           if( data != null ){
+             //alert(data[0].nombre + " " + data.length);
+
+             var fila = "";
+             for( i = 0 ; i < data.length ; i++ ){
+               fila += "<tr class='info'>"+
+                  "<td>"+ data[i].nombre + "</td>"+
+                  "<td>"+ data[i].apellido + "</td>"+
+                  "<td>"+ data[i].nickname + "</td>"+
+                  "<td>"+ data[i].edad + "</td>"+
+                  "<td>"+ data[i].email + "</td>"+
+                  "<td>"+ data[i].telefono + "</td>"+
+                  "<td>"+ data[i].tipo_usuario + "</td>"+
+                  "<td>"+ data[i].monto + "</td>"+
+                  "<td>"+ data[i].id + "</td>"+
+                  "</tr>";
+             }
+             $('#tablass').html ("<thead><tr><th>Nombre</th><th>Apellido</th><th>Nickname</th><th>Edad</th><th>Email</th><th>Telefono</th><th>Tipo de Usuario</th><th>Monto</th><th>Id</th></tr></thead>"+
+             "<tbody>" + fila + "</tbody>");
+           }else
+              alert( "error al buscar un usuario." );
+        })
+        .error(function(data, error){
+          alert('La peticion no se completo por: ' + error);
+        });
+      //}
+  });
 }
