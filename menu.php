@@ -169,7 +169,7 @@
 						<input type="submit" name="boton_actualizar" id="boton_actualizar" value="Actualizar" >
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="busquedas">
-						<h2>Ingresa un id para un solo usuario o deja la entrada vacia para mostrar a todos:</h2>
+						<h2>Ingresa un id:</h2>
 						<br>
 						<h4><span class="label label-primary">Ingresa id:</span></h4>
 						<input type="text" id="buscando"/>

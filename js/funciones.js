@@ -255,7 +255,9 @@ function buscar(){
       		dataType: 'json'
       	})
         .success(function(data){
-           if( data != null ){
+           if( data == "")
+            alert("No registrado.");
+           else if( data != null ){
              //alert(data[0].nombre + " " + data.length);
 
              var fila = "";
@@ -281,5 +283,7 @@ function buscar(){
           alert('La peticion no se completo por: ' + error);
         });
       //}
+      $("#buscando").val('');
   });
+
 }
